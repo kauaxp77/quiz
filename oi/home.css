@@ -1,0 +1,111 @@
+/* Estilos gerais */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Mono:ital,wght@1,700&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #ffffff, #00FF94);
+}
+
+/* Container para centralização */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos do cabeçalho */
+.header {
+    background-color: #00FF94;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-title {
+    margin: 0;
+}
+
+/* Estilos das seções */
+.section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+.section-title {
+    color: #00FF94;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.section-text {
+    color: #555;
+}
+
+/* Estilos da caixa de informação */
+.section-label {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Estilos do botão de início */
+.start-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00FF94;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.start-button:hover {
+    background-color: #1f8a04;
+}
+
+/* Estilos da seção sidebar (regras e introdução) */
+.sidebar {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: left;
+    position: fixed; /* Define o posicionamento fixo */
+    top: 350px; /* Define a distância a partir do topo */
+    right: 40px; /* Define a distância a partir da direita */
+}
+
+.sidebar-title {
+    color: #00FF94;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.sidebar-list {
+    list-style-type: decimal;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 10px;
+}
+
+/* Estilos do texto da introdução */
+.sidebar p {
+    color: #555;
+    font-size: 16px;
+}
+

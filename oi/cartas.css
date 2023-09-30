@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Mono:ital,wght@1,700&display=swap');
+
+body {
+    background: linear-gradient(to bottom right, #ffffff, #00FF94);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Adicione isso para que o position absolute funcione corretamente */
+}
+
+h1 {
+    background-image: linear-gradient(to right, #ffffff, #00FF94);
+    padding: 1px; /* Adicione algum espaçamento interno */
+    text-align: center; /* Centralize o texto horizontalmente */
+    position: absolute;
+    top: 20px; /* Ajuste a posição vertical conforme necessário */
+    left: 0;
+    right: 0;
+    border: #fff;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+    perspective: 1000px;
+    cursor: pointer; /* Indica que as cartas são clicáveis */
+    position: relative; /* Corrige a exibição do conteúdo */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 2px solid #63A69F; /* Cor da borda */
+    background: linear-gradient( #ffffff, #00FF94); /* Gradiente de fundo das cartas */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform: rotateY(0deg); /* Inicialmente, a carta está fechada */
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg); /* Quando a classe .flipped é adicionada, a carta vira */
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background: linear-gradient( #ffffff, #00FF94);
+    color: #000; /* Cor do texto nas cartas frontais */
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card-back {
+    background: linear-gradient( #ffffff, #00FF94); /* Cor de fundo gradiente das cartas viradas */
+    color: #000; /* Cor do texto nas cartas viradas */
+    transform: rotateY(180deg);
+    display: flex; /* Tornar o elemento um container flex */
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    font-family: "NomeDaFonte", sans-serif; /* Substitua "NomeDaFonte" pela sua escolha de fonte */
+    border-radius: 10px;
+}
+
+/* Estilos para o botão Reiniciar Jogo */
+#resetButton {
+    background-color: #63A69F; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px; /* Posição vertical no meio inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centralize horizontalmente */
+}
+
+/* Adicione outros estilos personalizados conforme necessário */
+

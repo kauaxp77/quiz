@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../projetos finais python ETC"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "QTI, quiz"
+	}
+}
