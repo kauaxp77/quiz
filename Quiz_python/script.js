@@ -105,7 +105,7 @@ const questions = [
     {
         "pergunta": "Qual componente do computador que tem uma função equivalente ao cérebro humano?",
         "respostas": ["a) cooler ", "b) processador  ", "c) HD  ", "d) placa vídeo"],
-        "resposta_correta": "c"
+        "resposta_correta": "b"
     },
     {
         "pergunta": "Соm bаѕеѕ nоѕ ѕеuѕ соnhесіmеntоѕ ѕоbrе а рlаса dе vídео, mаrquе а аltеrnаtіvа ІNСОRRЕТА. ",
@@ -203,7 +203,7 @@ tenteNovamenteButton.addEventListener("click", () => {
     score = 0;
     displayQuestion();
     tenteNovamenteButton.style.display = "none"; // Ocultar o botão "Tente Novamente"
-    verificarRespostaButton.style.display = "block"; 
+    if (verificarRespostaButton) verificarRespostaButton.style.display = "block";
     resultadoElement.innerText = ""; //
 });
 
@@ -212,7 +212,7 @@ function resetGame() {
     score = 0;
     displayQuestion();
     tenteNovamenteButton.style.display = "none"; // Ocultar o botão "Tente Novamente"
-    verificarRespostaButton.style.display = "block"; 
+    if (verificarRespostaButton) verificarRespostaButton.style.display = "block";
     resultadoElement.innerText = "none"; // Limpar a pontuação anterior
 }
 
